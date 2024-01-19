@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fr.obeo.dsl.C4/src-gen" creationIcons="false"
+    editDirectory="/fr.obeo.dsl.C4.edit/src-gen" editorDirectory="/fr.obeo.dsl.C4.editor/src-gen"
+    modelPluginID="fr.obeo.dsl.C4" modelName="C4" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>C4.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="C4" basePackage="fr.obeo.dsl" disposableProviderFactory="true"
+      ecorePackage="C4.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="C4.ecore#//ContextElementKind">
+      <genEnumLiterals ecoreEnumLiteral="C4.ecore#//ContextElementKind/ExternalSystem"/>
+      <genEnumLiterals ecoreEnumLiteral="C4.ecore#//ContextElementKind/People"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="C4.ecore#//ContainerizationElementKind">
+      <genEnumLiterals ecoreEnumLiteral="C4.ecore#//ContainerizationElementKind/Software"/>
+      <genEnumLiterals ecoreEnumLiteral="C4.ecore#//ContainerizationElementKind/People"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="C4.ecore#//ExternalElementKind">
+      <genEnumLiterals ecoreEnumLiteral="C4.ecore#//ExternalElementKind/SoftwareSystem"/>
+      <genEnumLiterals ecoreEnumLiteral="C4.ecore#//ExternalElementKind/People"/>
+    </genEnums>
+    <genClasses ecoreClass="C4.ecore#//C4Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/softwareSystem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/systemContext"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/systemContainerization"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/externalElements"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//SoftwareSystem"/>
+    <genClasses ecoreClass="C4.ecore#//SystemContext">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//SystemContext/contextInteractions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//SystemContext/contextElements"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContextInteraction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContextInteraction/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContextInteraction/target"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//ContextElement/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContextInteractable"/>
+    <genClasses ecoreClass="C4.ecore#//SystemContainerization">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//SystemContainerization/containerizationElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//SystemContainerization/containerizationInteractions"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContainerizationElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//ContainerizationElement/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContainerizationInteraction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContainerizationInteraction/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContainerizationInteraction/source"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ExternalElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//ExternalElement/kind"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

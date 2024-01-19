@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="C4" nsURI="http://www.obeo.fr/dsl/C4/1.0.0" nsPrefix="C4">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DescribedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TechnologicalElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="technology" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IconedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathToIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="C4Model" eSuperTypes="#//NamedElement #//DescribedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="softwareSystem" lowerBound="1"
+        eType="#//SoftwareSystem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemContext" eType="#//SystemContext"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemContainerization"
+        eType="#//SystemContainerization" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalElements" upperBound="-1"
+        eType="#//ExternalElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containerComponentizations"
+        upperBound="-1" eType="#//ContainerComponentization" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentExternalResources"
+        upperBound="-1" eType="#//ComponentRefinement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SoftwareSystem" eSuperTypes="#//NamedElement #//DescribedElement #//IconedElement #//ContextInteractable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalElement" abstract="true" eSuperTypes="#//ContextInteractable #//ContainerizationInteractable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalPerson" eSuperTypes="#//ExternalElement #//NamedElement #//DescribedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalSystem" eSuperTypes="#//ExternalElement #//NamedElement #//DescribedElement #//IconedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemContext">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextInteractions" upperBound="-1"
+        eType="#//ContextInteraction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextInteractables" upperBound="-1"
+        eType="#//ContextInteractable" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextInteraction" eSuperTypes="#//NamedElement #//DescribedElement #//TechnologicalElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//ContextInteractable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//ContextInteractable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextInteractable" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemContainerization">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containerizationElements"
+        upperBound="-1" eType="#//ContainerizationElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containerizationInteractions"
+        upperBound="-1" eType="#//ContainerizationInteraction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerizationElement" eSuperTypes="#//ContainerizationInteractable #//IconedElement #//NamedElement #//DescribedElement #//TechnologicalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerizationInteraction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//ContainerizationInteractable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//ContainerizationInteractable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerizationInteractable" eSuperTypes="#//ComponentizationInteractable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerComponentization">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//ContainerizationElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentizationElements"
+        upperBound="-1" eType="#//ComponentizationElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentizationInteractions"
+        upperBound="-1" eType="#//ComponentizationInteraction"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentizationElement" eSuperTypes="#//ComponentizationInteractable #//IconedElement #//NamedElement #//DescribedElement #//TechnologicalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentizationInteraction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//ComponentizationInteractable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//ComponentizationInteractable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentizationInteractable" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentRefinement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentizationElement"
+        eType="#//ComponentizationElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentClues" upperBound="-1"
+        eType="#//ComponentClue" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentClue" eSuperTypes="#//IconedElement #//NamedElement #//DescribedElement #//TechnologicalElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hyperlink" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
