@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fr.obeo.dsl.C4.model/src-gen" creationIcons="false"
+    editDirectory="/fr.obeo.dsl.C4.model.edit/src-gen" editorDirectory="" modelPluginID="fr.obeo.dsl.model.C4"
+    modelName="C4" modelPluginClass="fr.obeo.dsl.C4.model.C4ModelPlugin" editPluginClass="fr.obeo.dsl.C4.model.edit.C4ModelEditPlugin"
+    editorPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" testSuiteClass="" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="17.0" copyrightFields="false" editPluginID="fr.obeo.dsl.C4.model.edit"
+    editorPluginID="fr.obeo.dsl.C4.model.editor" testsPluginID="fr.obeo.dsl.model.C4.tests"
+    operationReflection="true" importOrganizing="true" cleanup="true">
+  <foreignModel>C4.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="C4" basePackage="fr.obeo.dsl" disposableProviderFactory="true"
+      interfacePackageSuffix="model.api" metaDataPackageSuffix="model.meta" classPackageSuffix="model.impl"
+      utilityPackageSuffix="model.util" providerPackageSuffix="model.edit.provider"
+      presentationPackageSuffix="model.editor.presentation" testsPackageSuffix="model.tests"
+      multipleEditorPages="false" generateModelWizard="false" fileExtensions="C4"
+      ecorePackage="C4.ecore#/">
+    <genClasses ecoreClass="C4.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//DescribedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//DescribedElement/description"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//TechnologicalElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//TechnologicalElement/technology"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//IconedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//IconedElement/pathToIcon"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//C4Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/softwareSystem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/systemContext"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/systemContainerization"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/externalElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/containerComponentizations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/componentExternalResources"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//SoftwareSystem"/>
+    <genClasses ecoreClass="C4.ecore#//ExternalElement"/>
+    <genClasses ecoreClass="C4.ecore#//ExternalPerson"/>
+    <genClasses ecoreClass="C4.ecore#//ExternalSystem"/>
+    <genClasses ecoreClass="C4.ecore#//SystemContext">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//SystemContext/contextInteractions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//SystemContext/contextInteractables"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContextInteraction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContextInteraction/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContextInteraction/target"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContextInteractable"/>
+    <genClasses ecoreClass="C4.ecore#//SystemContainerization">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//SystemContainerization/containerizationElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//SystemContainerization/containerizationInteractions"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContainerizationElement"/>
+    <genClasses ecoreClass="C4.ecore#//ContainerizationInteraction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContainerizationInteraction/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContainerizationInteraction/source"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ContainerizationInteractable"/>
+    <genClasses ecoreClass="C4.ecore#//ContainerComponentization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContainerComponentization/container"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContainerComponentization/componentizationElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ContainerComponentization/componentizationInteractions"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ComponentizationElement"/>
+    <genClasses ecoreClass="C4.ecore#//ComponentizationInteraction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ComponentizationInteraction/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ComponentizationInteraction/source"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="C4.ecore#//ComponentizationInteractable"/>
+    <genClasses ecoreClass="C4.ecore#//ComponentRefinement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference C4.ecore#//ComponentRefinement/componentizationElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//ComponentRefinement/componentClues"/>
+    </genClasses>
+    <genClasses ecoreClass="C4.ecore#//ComponentClue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//ComponentClue/hyperlink"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

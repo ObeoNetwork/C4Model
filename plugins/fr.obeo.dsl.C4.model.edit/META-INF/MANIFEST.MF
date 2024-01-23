@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.obeo.dsl.C4.model.edit;singleton:=true
+Automatic-Module-Name: fr.obeo.dsl.C4.model.edit
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: fr.obeo.dsl.C4.model.edit.C4ModelEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: fr.obeo.dsl.C4.model.edit,
+ fr.obeo.dsl.C4.model.edit.provider
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.22.0",
+ org.eclipse.emf.edit;bundle-version="2.16.0";visibility:=reexport,
+ fr.obeo.dsl.C4.model;bundle-version="0.1.0"
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated C4 -->
+      <package
+            uri="http://www.obeo.fr/dsl/C4/1.0.0"
+            class="fr.obeo.dsl.C4.model.meta.C4Package"
+            genModel="model/C4.genmodel"/>
+   </extension>
+
+</plugin>

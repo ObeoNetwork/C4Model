@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="fr.obeo.dsl.C4.model.feature">
+      <category name="C4"/>
+   </feature>
+   <category-def name="C4" label="C4 Model - Metamodel APIs">
+      <description>
+         The Ecore metamodel APIs for the C4 Model domain.
+      </description>
+   </category-def>
+</site>

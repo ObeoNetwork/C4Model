@@ -1,0 +1,7 @@
+target "C4Model" with source requirements
+
+location "https://download.eclipse.org/eclipse/updates/4.23/" {
+	org.eclipse.core.runtime.feature.feature.group lazy
+	org.eclipse.emf.ecore.feature.group lazy
+	org.eclipse.emf.edit.feature.group lazy
+}
