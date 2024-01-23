@@ -2,14 +2,33 @@
  */
 package fr.obeo.dsl.C4.model.util;
 
-import fr.obeo.dsl.C4.model.api.*;
-
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
+
+import fr.obeo.dsl.C4.model.api.C4Model;
+import fr.obeo.dsl.C4.model.api.ComponentClue;
+import fr.obeo.dsl.C4.model.api.ComponentRefinement;
+import fr.obeo.dsl.C4.model.api.ComponentizationElement;
+import fr.obeo.dsl.C4.model.api.ComponentizationInteractable;
+import fr.obeo.dsl.C4.model.api.ComponentizationInteraction;
+import fr.obeo.dsl.C4.model.api.ContainerComponentization;
+import fr.obeo.dsl.C4.model.api.ContainerizationElement;
+import fr.obeo.dsl.C4.model.api.ContainerizationInteractable;
+import fr.obeo.dsl.C4.model.api.ContainerizationInteraction;
+import fr.obeo.dsl.C4.model.api.ContextInteractable;
+import fr.obeo.dsl.C4.model.api.ContextInteraction;
+import fr.obeo.dsl.C4.model.api.DescribedElement;
+import fr.obeo.dsl.C4.model.api.ExternalElement;
+import fr.obeo.dsl.C4.model.api.ExternalPerson;
+import fr.obeo.dsl.C4.model.api.ExternalSystem;
+import fr.obeo.dsl.C4.model.api.IconedElement;
+import fr.obeo.dsl.C4.model.api.NamedElement;
+import fr.obeo.dsl.C4.model.api.SoftwareSystem;
+import fr.obeo.dsl.C4.model.api.SystemContainerization;
+import fr.obeo.dsl.C4.model.api.SystemContext;
+import fr.obeo.dsl.C4.model.api.TechnologicalElement;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -232,6 +251,12 @@ public class C4Switch<T> extends Switch<T> {
 			ContainerizationInteraction containerizationInteraction = (ContainerizationInteraction) theEObject;
 			T result = caseContainerizationInteraction(containerizationInteraction);
 			if (result == null)
+				result = caseNamedElement(containerizationInteraction);
+			if (result == null)
+				result = caseDescribedElement(containerizationInteraction);
+			if (result == null)
+				result = caseTechnologicalElement(containerizationInteraction);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -271,6 +296,12 @@ public class C4Switch<T> extends Switch<T> {
 		case C4Package.COMPONENTIZATION_INTERACTION: {
 			ComponentizationInteraction componentizationInteraction = (ComponentizationInteraction) theEObject;
 			T result = caseComponentizationInteraction(componentizationInteraction);
+			if (result == null)
+				result = caseNamedElement(componentizationInteraction);
+			if (result == null)
+				result = caseDescribedElement(componentizationInteraction);
+			if (result == null)
+				result = caseTechnologicalElement(componentizationInteraction);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;

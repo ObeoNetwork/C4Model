@@ -2,6 +2,12 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import fr.obeo.dsl.C4.model.api.C4Model;
 import fr.obeo.dsl.C4.model.api.ComponentClue;
 import fr.obeo.dsl.C4.model.api.ComponentRefinement;
@@ -24,16 +30,8 @@ import fr.obeo.dsl.C4.model.api.SoftwareSystem;
 import fr.obeo.dsl.C4.model.api.SystemContainerization;
 import fr.obeo.dsl.C4.model.api.SystemContext;
 import fr.obeo.dsl.C4.model.api.TechnologicalElement;
-
 import fr.obeo.dsl.C4.model.meta.C4Factory;
 import fr.obeo.dsl.C4.model.meta.C4Package;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -892,12 +890,18 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		containerizationElementEClass.getESuperTypes().add(this.getNamedElement());
 		containerizationElementEClass.getESuperTypes().add(this.getDescribedElement());
 		containerizationElementEClass.getESuperTypes().add(this.getTechnologicalElement());
+		containerizationInteractionEClass.getESuperTypes().add(this.getNamedElement());
+		containerizationInteractionEClass.getESuperTypes().add(this.getDescribedElement());
+		containerizationInteractionEClass.getESuperTypes().add(this.getTechnologicalElement());
 		containerizationInteractableEClass.getESuperTypes().add(this.getComponentizationInteractable());
 		componentizationElementEClass.getESuperTypes().add(this.getComponentizationInteractable());
 		componentizationElementEClass.getESuperTypes().add(this.getIconedElement());
 		componentizationElementEClass.getESuperTypes().add(this.getNamedElement());
 		componentizationElementEClass.getESuperTypes().add(this.getDescribedElement());
 		componentizationElementEClass.getESuperTypes().add(this.getTechnologicalElement());
+		componentizationInteractionEClass.getESuperTypes().add(this.getNamedElement());
+		componentizationInteractionEClass.getESuperTypes().add(this.getDescribedElement());
+		componentizationInteractionEClass.getESuperTypes().add(this.getTechnologicalElement());
 		componentClueEClass.getESuperTypes().add(this.getIconedElement());
 		componentClueEClass.getESuperTypes().add(this.getNamedElement());
 		componentClueEClass.getESuperTypes().add(this.getDescribedElement());

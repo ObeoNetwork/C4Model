@@ -51,7 +51,7 @@
         upperBound="-1" eType="#//ContainerizationInteraction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainerizationElement" eSuperTypes="#//ContainerizationInteractable #//IconedElement #//NamedElement #//DescribedElement #//TechnologicalElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ContainerizationInteraction">
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerizationInteraction" eSuperTypes="#//NamedElement #//DescribedElement #//TechnologicalElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//ContainerizationInteractable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
@@ -66,7 +66,7 @@
         upperBound="-1" eType="#//ComponentizationInteraction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentizationElement" eSuperTypes="#//ComponentizationInteractable #//IconedElement #//NamedElement #//DescribedElement #//TechnologicalElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponentizationInteraction">
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentizationInteraction" eSuperTypes="#//NamedElement #//DescribedElement #//TechnologicalElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//ComponentizationInteractable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"

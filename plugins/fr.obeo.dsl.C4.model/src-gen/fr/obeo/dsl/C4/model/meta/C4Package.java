@@ -812,13 +812,40 @@ public interface C4Package extends EPackage {
 	int CONTAINERIZATION_INTERACTION = 14;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINERIZATION_INTERACTION__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINERIZATION_INTERACTION__DESCRIPTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Technology</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINERIZATION_INTERACTION__TECHNOLOGY = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINERIZATION_INTERACTION__TARGET = 0;
+	int CONTAINERIZATION_INTERACTION__TARGET = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -827,7 +854,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINERIZATION_INTERACTION__SOURCE = 1;
+	int CONTAINERIZATION_INTERACTION__SOURCE = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Containerization Interaction</em>' class.
@@ -836,7 +863,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINERIZATION_INTERACTION_FEATURE_COUNT = 2;
+	int CONTAINERIZATION_INTERACTION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Containerization Interaction</em>' class.
@@ -845,7 +872,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINERIZATION_INTERACTION_OPERATION_COUNT = 0;
+	int CONTAINERIZATION_INTERACTION_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.ContainerComponentizationImpl <em>Container Componentization</em>}' class.
@@ -977,13 +1004,40 @@ public interface C4Package extends EPackage {
 	int COMPONENTIZATION_INTERACTION = 18;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENTIZATION_INTERACTION__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENTIZATION_INTERACTION__DESCRIPTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Technology</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENTIZATION_INTERACTION__TECHNOLOGY = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTIZATION_INTERACTION__TARGET = 0;
+	int COMPONENTIZATION_INTERACTION__TARGET = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -992,7 +1046,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTIZATION_INTERACTION__SOURCE = 1;
+	int COMPONENTIZATION_INTERACTION__SOURCE = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Componentization Interaction</em>' class.
@@ -1001,7 +1055,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTIZATION_INTERACTION_FEATURE_COUNT = 2;
+	int COMPONENTIZATION_INTERACTION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Componentization Interaction</em>' class.
@@ -1010,7 +1064,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTIZATION_INTERACTION_OPERATION_COUNT = 0;
+	int COMPONENTIZATION_INTERACTION_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.ComponentRefinementImpl <em>Component Refinement</em>}' class.

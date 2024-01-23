@@ -17,4 +17,4 @@ Export-Package: fr.obeo.dsl.C4.model,
  fr.obeo.dsl.C4.model.meta,
  fr.obeo.dsl.C4.model.util,
  fr.obeo.dsl.C4.model.utils
-Automatic-Module-Name: fr.obeo.dsl.model.C4
+Automatic-Module-Name: fr.obeo.dsl.C4.model
