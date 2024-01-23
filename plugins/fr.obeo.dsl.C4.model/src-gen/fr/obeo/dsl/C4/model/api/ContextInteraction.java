@@ -19,7 +19,7 @@ package fr.obeo.dsl.C4.model.api;
  * @model
  * @generated
  */
-public interface ContextInteraction extends NamedElement, DescribedElement, TechnologicalElement {
+public interface ContextInteraction extends NamedElement, DescribedElement, TechnologicalElement, C4Element {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -4,8 +4,6 @@ package fr.obeo.dsl.C4.model.api;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>System Containerization</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SystemContainerization extends EObject {
+public interface SystemContainerization extends C4Element {
 	/**
 	 * Returns the value of the '<em><b>Containerization Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.obeo.dsl.C4.model.api.ContainerizationElement}.

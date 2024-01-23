@@ -4,8 +4,6 @@ package fr.obeo.dsl.C4.model.api;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>System Context</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SystemContext extends EObject {
+public interface SystemContext extends C4Element {
 	/**
 	 * Returns the value of the '<em><b>Context Interactions</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.obeo.dsl.C4.model.api.ContextInteraction}.

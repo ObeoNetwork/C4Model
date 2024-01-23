@@ -2,25 +2,19 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
-import fr.obeo.dsl.C4.model.api.ContainerizationElement;
-import fr.obeo.dsl.C4.model.api.ContainerizationInteraction;
-import fr.obeo.dsl.C4.model.api.SystemContainerization;
-
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import fr.obeo.dsl.C4.model.api.ContainerizationElement;
+import fr.obeo.dsl.C4.model.api.ContainerizationInteraction;
+import fr.obeo.dsl.C4.model.api.SystemContainerization;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class SystemContainerizationImpl extends MinimalEObjectImpl.Container implements SystemContainerization {
+public class SystemContainerizationImpl extends C4ElementImpl implements SystemContainerization {
 	/**
 	 * The cached value of the '{@link #getContainerizationElements() <em>Containerization Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -84,7 +78,7 @@ public class SystemContainerizationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public EList<ContainerizationElement> getContainerizationElements() {
 		if (containerizationElements == null) {
-			containerizationElements = new EObjectContainmentEList<ContainerizationElement>(
+			containerizationElements = new EObjectContainmentEList<>(
 					ContainerizationElement.class, this, C4Package.SYSTEM_CONTAINERIZATION__CONTAINERIZATION_ELEMENTS);
 		}
 		return containerizationElements;
@@ -98,7 +92,7 @@ public class SystemContainerizationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public EList<ContainerizationInteraction> getContainerizationInteractions() {
 		if (containerizationInteractions == null) {
-			containerizationInteractions = new EObjectContainmentEList<ContainerizationInteraction>(
+			containerizationInteractions = new EObjectContainmentEList<>(
 					ContainerizationInteraction.class, this,
 					C4Package.SYSTEM_CONTAINERIZATION__CONTAINERIZATION_INTERACTIONS);
 		}

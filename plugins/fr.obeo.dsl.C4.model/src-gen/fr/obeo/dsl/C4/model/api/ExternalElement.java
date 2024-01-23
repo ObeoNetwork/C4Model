@@ -12,5 +12,5 @@ package fr.obeo.dsl.C4.model.api;
  * @model abstract="true"
  * @generated
  */
-public interface ExternalElement extends ContextInteractable, ContainerizationInteractable {
+public interface ExternalElement extends ContextInteractable, ContainerizationInteractable, C4Element {
 } // ExternalElement

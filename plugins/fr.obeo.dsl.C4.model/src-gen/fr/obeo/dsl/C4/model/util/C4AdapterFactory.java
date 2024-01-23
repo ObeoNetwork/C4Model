@@ -2,16 +2,35 @@
  */
 package fr.obeo.dsl.C4.model.util;
 
-import fr.obeo.dsl.C4.model.api.*;
-
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
+
+import fr.obeo.dsl.C4.model.api.C4Element;
+import fr.obeo.dsl.C4.model.api.C4Model;
+import fr.obeo.dsl.C4.model.api.ComponentClue;
+import fr.obeo.dsl.C4.model.api.ComponentRefinement;
+import fr.obeo.dsl.C4.model.api.ComponentizationElement;
+import fr.obeo.dsl.C4.model.api.ComponentizationInteractable;
+import fr.obeo.dsl.C4.model.api.ComponentizationInteraction;
+import fr.obeo.dsl.C4.model.api.ContainerComponentization;
+import fr.obeo.dsl.C4.model.api.ContainerizationElement;
+import fr.obeo.dsl.C4.model.api.ContainerizationInteractable;
+import fr.obeo.dsl.C4.model.api.ContainerizationInteraction;
+import fr.obeo.dsl.C4.model.api.ContextInteractable;
+import fr.obeo.dsl.C4.model.api.ContextInteraction;
+import fr.obeo.dsl.C4.model.api.DescribedElement;
+import fr.obeo.dsl.C4.model.api.ExternalElement;
+import fr.obeo.dsl.C4.model.api.ExternalPerson;
+import fr.obeo.dsl.C4.model.api.ExternalSystem;
+import fr.obeo.dsl.C4.model.api.IconedElement;
+import fr.obeo.dsl.C4.model.api.NamedElement;
+import fr.obeo.dsl.C4.model.api.SoftwareSystem;
+import fr.obeo.dsl.C4.model.api.SystemContainerization;
+import fr.obeo.dsl.C4.model.api.SystemContext;
+import fr.obeo.dsl.C4.model.api.TechnologicalElement;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +86,12 @@ public class C4AdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected C4Switch<Adapter> modelSwitch = new C4Switch<Adapter>() {
+	protected C4Switch<Adapter> modelSwitch = new C4Switch<>() {
+		@Override
+		public Adapter caseC4Element(C4Element object) {
+			return createC4ElementAdapter();
+		}
+
 		@Override
 		public Adapter caseNamedElement(NamedElement object) {
 			return createNamedElementAdapter();
@@ -195,6 +219,20 @@ public class C4AdapterFactory extends AdapterFactoryImpl {
 	@Override
 	public Adapter createAdapter(Notifier target) {
 		return modelSwitch.doSwitch((EObject) target);
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.obeo.dsl.C4.model.api.C4Element <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.obeo.dsl.C4.model.api.C4Element
+	 * @generated
+	 */
+	public Adapter createC4ElementAdapter() {
+		return null;
 	}
 
 	/**

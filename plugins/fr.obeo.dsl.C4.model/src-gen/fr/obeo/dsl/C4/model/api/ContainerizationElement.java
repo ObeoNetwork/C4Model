@@ -12,6 +12,6 @@ package fr.obeo.dsl.C4.model.api;
  * @model
  * @generated
  */
-public interface ContainerizationElement
-		extends ContainerizationInteractable, IconedElement, NamedElement, DescribedElement, TechnologicalElement {
+public interface ContainerizationElement extends ContainerizationInteractable, IconedElement, NamedElement,
+		DescribedElement, TechnologicalElement, C4Element {
 } // ContainerizationElement

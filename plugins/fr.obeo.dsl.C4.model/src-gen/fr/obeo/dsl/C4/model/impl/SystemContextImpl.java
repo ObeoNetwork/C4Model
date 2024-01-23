@@ -9,7 +9,6 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -33,7 +32,7 @@ import fr.obeo.dsl.C4.model.utils.C4ModelUtils;
  *
  * @generated
  */
-public class SystemContextImpl extends MinimalEObjectImpl.Container implements SystemContext {
+public class SystemContextImpl extends C4ElementImpl implements SystemContext {
 	/**
 	 * The cached value of the '{@link #getContextInteractions() <em>Context Interactions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -71,7 +70,7 @@ public class SystemContextImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public EList<ContextInteraction> getContextInteractions() {
 		if (contextInteractions == null) {
-			contextInteractions = new EObjectContainmentEList<ContextInteraction>(ContextInteraction.class, this,
+			contextInteractions = new EObjectContainmentEList<>(ContextInteraction.class, this,
 					C4Package.SYSTEM_CONTEXT__CONTEXT_INTERACTIONS);
 		}
 		return contextInteractions;

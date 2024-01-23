@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import fr.obeo.dsl.C4.model.api.C4Element;
 import fr.obeo.dsl.C4.model.api.C4Model;
 import fr.obeo.dsl.C4.model.api.ComponentClue;
 import fr.obeo.dsl.C4.model.api.ComponentRefinement;
@@ -40,6 +41,13 @@ import fr.obeo.dsl.C4.model.meta.C4Package;
  * @generated
  */
 public class C4PackageImpl extends EPackageImpl implements C4Package {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass c4ElementEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -255,6 +263,16 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(C4Package.eNS_URI, theC4Package);
 		return theC4Package;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getC4Element() {
+		return c4ElementEClass;
 	}
 
 	/**
@@ -767,6 +785,8 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		isCreated = true;
 
 		// Create classes and their features
+		c4ElementEClass = createEClass(C4_ELEMENT);
+
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
@@ -867,65 +887,90 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		namedElementEClass.getESuperTypes().add(this.getC4Element());
+		describedElementEClass.getESuperTypes().add(this.getC4Element());
+		technologicalElementEClass.getESuperTypes().add(this.getC4Element());
+		iconedElementEClass.getESuperTypes().add(this.getC4Element());
 		c4ModelEClass.getESuperTypes().add(this.getNamedElement());
 		c4ModelEClass.getESuperTypes().add(this.getDescribedElement());
+		c4ModelEClass.getESuperTypes().add(this.getC4Element());
 		softwareSystemEClass.getESuperTypes().add(this.getNamedElement());
 		softwareSystemEClass.getESuperTypes().add(this.getDescribedElement());
 		softwareSystemEClass.getESuperTypes().add(this.getIconedElement());
 		softwareSystemEClass.getESuperTypes().add(this.getContextInteractable());
+		softwareSystemEClass.getESuperTypes().add(this.getC4Element());
 		externalElementEClass.getESuperTypes().add(this.getContextInteractable());
 		externalElementEClass.getESuperTypes().add(this.getContainerizationInteractable());
+		externalElementEClass.getESuperTypes().add(this.getC4Element());
 		externalPersonEClass.getESuperTypes().add(this.getExternalElement());
 		externalPersonEClass.getESuperTypes().add(this.getNamedElement());
 		externalPersonEClass.getESuperTypes().add(this.getDescribedElement());
+		externalPersonEClass.getESuperTypes().add(this.getC4Element());
 		externalSystemEClass.getESuperTypes().add(this.getExternalElement());
 		externalSystemEClass.getESuperTypes().add(this.getNamedElement());
 		externalSystemEClass.getESuperTypes().add(this.getDescribedElement());
 		externalSystemEClass.getESuperTypes().add(this.getIconedElement());
+		externalSystemEClass.getESuperTypes().add(this.getC4Element());
+		systemContextEClass.getESuperTypes().add(this.getC4Element());
 		contextInteractionEClass.getESuperTypes().add(this.getNamedElement());
 		contextInteractionEClass.getESuperTypes().add(this.getDescribedElement());
 		contextInteractionEClass.getESuperTypes().add(this.getTechnologicalElement());
+		contextInteractionEClass.getESuperTypes().add(this.getC4Element());
+		contextInteractableEClass.getESuperTypes().add(this.getC4Element());
+		systemContainerizationEClass.getESuperTypes().add(this.getC4Element());
 		containerizationElementEClass.getESuperTypes().add(this.getContainerizationInteractable());
 		containerizationElementEClass.getESuperTypes().add(this.getIconedElement());
 		containerizationElementEClass.getESuperTypes().add(this.getNamedElement());
 		containerizationElementEClass.getESuperTypes().add(this.getDescribedElement());
 		containerizationElementEClass.getESuperTypes().add(this.getTechnologicalElement());
+		containerizationElementEClass.getESuperTypes().add(this.getC4Element());
 		containerizationInteractionEClass.getESuperTypes().add(this.getNamedElement());
 		containerizationInteractionEClass.getESuperTypes().add(this.getDescribedElement());
 		containerizationInteractionEClass.getESuperTypes().add(this.getTechnologicalElement());
+		containerizationInteractionEClass.getESuperTypes().add(this.getC4Element());
 		containerizationInteractableEClass.getESuperTypes().add(this.getComponentizationInteractable());
+		containerizationInteractableEClass.getESuperTypes().add(this.getC4Element());
+		containerComponentizationEClass.getESuperTypes().add(this.getC4Element());
 		componentizationElementEClass.getESuperTypes().add(this.getComponentizationInteractable());
 		componentizationElementEClass.getESuperTypes().add(this.getIconedElement());
 		componentizationElementEClass.getESuperTypes().add(this.getNamedElement());
 		componentizationElementEClass.getESuperTypes().add(this.getDescribedElement());
 		componentizationElementEClass.getESuperTypes().add(this.getTechnologicalElement());
+		componentizationElementEClass.getESuperTypes().add(this.getC4Element());
 		componentizationInteractionEClass.getESuperTypes().add(this.getNamedElement());
 		componentizationInteractionEClass.getESuperTypes().add(this.getDescribedElement());
 		componentizationInteractionEClass.getESuperTypes().add(this.getTechnologicalElement());
+		componentizationInteractionEClass.getESuperTypes().add(this.getC4Element());
+		componentizationInteractableEClass.getESuperTypes().add(this.getC4Element());
+		componentRefinementEClass.getESuperTypes().add(this.getC4Element());
 		componentClueEClass.getESuperTypes().add(this.getIconedElement());
 		componentClueEClass.getESuperTypes().add(this.getNamedElement());
 		componentClueEClass.getESuperTypes().add(this.getDescribedElement());
 		componentClueEClass.getESuperTypes().add(this.getTechnologicalElement());
+		componentClueEClass.getESuperTypes().add(this.getC4Element());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(c4ElementEClass, C4Element.class, "C4Element", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(describedElementEClass, DescribedElement.class, "DescribedElement", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(describedElementEClass, DescribedElement.class, "DescribedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDescribedElement_Description(), ecorePackage.getEString(), "description", null, 0, 1,
 				DescribedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(technologicalElementEClass, TechnologicalElement.class, "TechnologicalElement", !IS_ABSTRACT,
+		initEClass(technologicalElementEClass, TechnologicalElement.class, "TechnologicalElement", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTechnologicalElement_Technology(), ecorePackage.getEString(), "technology", null, 0, 1,
 				TechnologicalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(iconedElementEClass, IconedElement.class, "IconedElement", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(iconedElementEClass, IconedElement.class, "IconedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIconedElement_PathToIcon(), ecorePackage.getEString(), "pathToIcon", null, 0, 1,
 				IconedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,

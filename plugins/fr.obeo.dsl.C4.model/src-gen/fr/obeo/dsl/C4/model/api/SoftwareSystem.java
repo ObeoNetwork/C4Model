@@ -12,5 +12,5 @@ package fr.obeo.dsl.C4.model.api;
  * @model
  * @generated
  */
-public interface SoftwareSystem extends NamedElement, DescribedElement, IconedElement, ContextInteractable {
+public interface SoftwareSystem extends NamedElement, DescribedElement, IconedElement, ContextInteractable, C4Element {
 } // SoftwareSystem

@@ -4,8 +4,6 @@ package fr.obeo.dsl.C4.model.api;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Component Refinement</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ComponentRefinement extends EObject {
+public interface ComponentRefinement extends C4Element {
 	/**
 	 * Returns the value of the '<em><b>Componentization Element</b></em>' reference.
 	 * <!-- begin-user-doc -->

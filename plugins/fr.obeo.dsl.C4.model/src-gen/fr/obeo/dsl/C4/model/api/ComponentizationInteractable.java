@@ -2,8 +2,6 @@
  */
 package fr.obeo.dsl.C4.model.api;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Componentization Interactable</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface ComponentizationInteractable extends EObject {
+public interface ComponentizationInteractable extends C4Element {
 } // ComponentizationInteractable

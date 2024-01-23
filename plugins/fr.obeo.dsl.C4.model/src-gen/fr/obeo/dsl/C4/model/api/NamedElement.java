@@ -2,8 +2,6 @@
  */
 package fr.obeo.dsl.C4.model.api;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Named Element</b></em>'.
@@ -17,10 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see fr.obeo.dsl.C4.model.meta.C4Package#getNamedElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface NamedElement extends EObject {
+public interface NamedElement extends C4Element {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

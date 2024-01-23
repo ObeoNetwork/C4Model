@@ -12,6 +12,6 @@ package fr.obeo.dsl.C4.model.api;
  * @model
  * @generated
  */
-public interface ComponentizationElement
-		extends ComponentizationInteractable, IconedElement, NamedElement, DescribedElement, TechnologicalElement {
+public interface ComponentizationElement extends ComponentizationInteractable, IconedElement, NamedElement,
+		DescribedElement, TechnologicalElement, C4Element {
 } // ComponentizationElement

@@ -2,27 +2,21 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
-import fr.obeo.dsl.C4.model.api.ComponentClue;
-import fr.obeo.dsl.C4.model.api.ComponentRefinement;
-import fr.obeo.dsl.C4.model.api.ComponentizationElement;
-
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import fr.obeo.dsl.C4.model.api.ComponentClue;
+import fr.obeo.dsl.C4.model.api.ComponentRefinement;
+import fr.obeo.dsl.C4.model.api.ComponentizationElement;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implements ComponentRefinement {
+public class ComponentRefinementImpl extends C4ElementImpl implements ComponentRefinement {
 	/**
 	 * The cached value of the '{@link #getComponentizationElement() <em>Componentization Element</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -130,7 +124,7 @@ public class ComponentRefinementImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public EList<ComponentClue> getComponentClues() {
 		if (componentClues == null) {
-			componentClues = new EObjectContainmentEList<ComponentClue>(ComponentClue.class, this,
+			componentClues = new EObjectContainmentEList<>(ComponentClue.class, this,
 					C4Package.COMPONENT_REFINEMENT__COMPONENT_CLUES);
 		}
 		return componentClues;

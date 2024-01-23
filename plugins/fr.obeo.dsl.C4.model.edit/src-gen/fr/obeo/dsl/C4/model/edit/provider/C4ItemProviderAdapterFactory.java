@@ -2,15 +2,12 @@
  */
 package fr.obeo.dsl.C4.model.edit.provider;
 
-import fr.obeo.dsl.C4.model.util.C4AdapterFactory;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -22,6 +19,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+
+import fr.obeo.dsl.C4.model.util.C4AdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -56,7 +55,7 @@ public class C4ItemProviderAdapterFactory extends C4AdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Collection<Object> supportedTypes = new ArrayList<Object>();
+	protected Collection<Object> supportedTypes = new ArrayList<>();
 
 	/**
 	 * This constructs an instance.
@@ -70,98 +69,6 @@ public class C4ItemProviderAdapterFactory extends C4AdapterFactory
 		supportedTypes.add(ITreeItemContentProvider.class);
 		supportedTypes.add(IItemLabelProvider.class);
 		supportedTypes.add(IItemPropertySource.class);
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.dsl.C4.model.api.NamedElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NamedElementItemProvider namedElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link fr.obeo.dsl.C4.model.api.NamedElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNamedElementAdapter() {
-		if (namedElementItemProvider == null) {
-			namedElementItemProvider = new NamedElementItemProvider(this);
-		}
-
-		return namedElementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.dsl.C4.model.api.DescribedElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DescribedElementItemProvider describedElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link fr.obeo.dsl.C4.model.api.DescribedElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDescribedElementAdapter() {
-		if (describedElementItemProvider == null) {
-			describedElementItemProvider = new DescribedElementItemProvider(this);
-		}
-
-		return describedElementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.dsl.C4.model.api.TechnologicalElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TechnologicalElementItemProvider technologicalElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link fr.obeo.dsl.C4.model.api.TechnologicalElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTechnologicalElementAdapter() {
-		if (technologicalElementItemProvider == null) {
-			technologicalElementItemProvider = new TechnologicalElementItemProvider(this);
-		}
-
-		return technologicalElementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link fr.obeo.dsl.C4.model.api.IconedElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IconedElementItemProvider iconedElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link fr.obeo.dsl.C4.model.api.IconedElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIconedElementAdapter() {
-		if (iconedElementItemProvider == null) {
-			iconedElementItemProvider = new IconedElementItemProvider(this);
-		}
-
-		return iconedElementItemProvider;
 	}
 
 	/**
@@ -607,21 +514,13 @@ public class C4ItemProviderAdapterFactory extends C4AdapterFactory
 	}
 
 	/**
-	 * This disposes all of the item providers created by this factory. 
+	 * This disposes all of the item providers created by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public void dispose() {
-		if (namedElementItemProvider != null)
-			namedElementItemProvider.dispose();
-		if (describedElementItemProvider != null)
-			describedElementItemProvider.dispose();
-		if (technologicalElementItemProvider != null)
-			technologicalElementItemProvider.dispose();
-		if (iconedElementItemProvider != null)
-			iconedElementItemProvider.dispose();
 		if (c4ModelItemProvider != null)
 			c4ModelItemProvider.dispose();
 		if (softwareSystemItemProvider != null)

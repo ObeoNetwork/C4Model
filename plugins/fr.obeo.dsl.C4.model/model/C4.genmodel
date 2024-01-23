@@ -17,6 +17,7 @@
       presentationPackageSuffix="model.editor.presentation" testsPackageSuffix="model.tests"
       multipleEditorPages="false" generateModelWizard="false" fileExtensions="C4"
       ecorePackage="C4.ecore#/">
+    <genClasses image="false" ecoreClass="C4.ecore#//C4Element"/>
     <genClasses ecoreClass="C4.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute C4.ecore#//NamedElement/name"/>
     </genClasses>

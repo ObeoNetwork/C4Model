@@ -18,7 +18,7 @@ package fr.obeo.dsl.C4.model.api;
  * @model
  * @generated
  */
-public interface ComponentClue extends IconedElement, NamedElement, DescribedElement, TechnologicalElement {
+public interface ComponentClue extends IconedElement, NamedElement, DescribedElement, TechnologicalElement, C4Element {
 	/**
 	 * Returns the value of the '<em><b>Hyperlink</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
+import fr.obeo.dsl.C4.model.api.C4Element;
 import fr.obeo.dsl.C4.model.api.C4Model;
 import fr.obeo.dsl.C4.model.api.ComponentClue;
 import fr.obeo.dsl.C4.model.api.ComponentRefinement;
@@ -87,9 +88,18 @@ public class C4Switch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+		case C4Package.C4_ELEMENT: {
+			C4Element c4Element = (C4Element) theEObject;
+			T result = caseC4Element(c4Element);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case C4Package.NAMED_ELEMENT: {
 			NamedElement namedElement = (NamedElement) theEObject;
 			T result = caseNamedElement(namedElement);
+			if (result == null)
+				result = caseC4Element(namedElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -98,6 +108,8 @@ public class C4Switch<T> extends Switch<T> {
 			DescribedElement describedElement = (DescribedElement) theEObject;
 			T result = caseDescribedElement(describedElement);
 			if (result == null)
+				result = caseC4Element(describedElement);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -105,12 +117,16 @@ public class C4Switch<T> extends Switch<T> {
 			TechnologicalElement technologicalElement = (TechnologicalElement) theEObject;
 			T result = caseTechnologicalElement(technologicalElement);
 			if (result == null)
+				result = caseC4Element(technologicalElement);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case C4Package.ICONED_ELEMENT: {
 			IconedElement iconedElement = (IconedElement) theEObject;
 			T result = caseIconedElement(iconedElement);
+			if (result == null)
+				result = caseC4Element(iconedElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -122,6 +138,8 @@ public class C4Switch<T> extends Switch<T> {
 				result = caseNamedElement(c4Model);
 			if (result == null)
 				result = caseDescribedElement(c4Model);
+			if (result == null)
+				result = caseC4Element(c4Model);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -138,6 +156,8 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseContextInteractable(softwareSystem);
 			if (result == null)
+				result = caseC4Element(softwareSystem);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -150,6 +170,8 @@ public class C4Switch<T> extends Switch<T> {
 				result = caseContainerizationInteractable(externalElement);
 			if (result == null)
 				result = caseComponentizationInteractable(externalElement);
+			if (result == null)
+				result = caseC4Element(externalElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -169,6 +191,8 @@ public class C4Switch<T> extends Switch<T> {
 				result = caseContainerizationInteractable(externalPerson);
 			if (result == null)
 				result = caseComponentizationInteractable(externalPerson);
+			if (result == null)
+				result = caseC4Element(externalPerson);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -191,12 +215,16 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseComponentizationInteractable(externalSystem);
 			if (result == null)
+				result = caseC4Element(externalSystem);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case C4Package.SYSTEM_CONTEXT: {
 			SystemContext systemContext = (SystemContext) theEObject;
 			T result = caseSystemContext(systemContext);
+			if (result == null)
+				result = caseC4Element(systemContext);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -211,6 +239,8 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTechnologicalElement(contextInteraction);
 			if (result == null)
+				result = caseC4Element(contextInteraction);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -218,12 +248,16 @@ public class C4Switch<T> extends Switch<T> {
 			ContextInteractable contextInteractable = (ContextInteractable) theEObject;
 			T result = caseContextInteractable(contextInteractable);
 			if (result == null)
+				result = caseC4Element(contextInteractable);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case C4Package.SYSTEM_CONTAINERIZATION: {
 			SystemContainerization systemContainerization = (SystemContainerization) theEObject;
 			T result = caseSystemContainerization(systemContainerization);
+			if (result == null)
+				result = caseC4Element(systemContainerization);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -244,6 +278,8 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseComponentizationInteractable(containerizationElement);
 			if (result == null)
+				result = caseC4Element(containerizationElement);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -257,6 +293,8 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTechnologicalElement(containerizationInteraction);
 			if (result == null)
+				result = caseC4Element(containerizationInteraction);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -266,12 +304,16 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseComponentizationInteractable(containerizationInteractable);
 			if (result == null)
+				result = caseC4Element(containerizationInteractable);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case C4Package.CONTAINER_COMPONENTIZATION: {
 			ContainerComponentization containerComponentization = (ContainerComponentization) theEObject;
 			T result = caseContainerComponentization(containerComponentization);
+			if (result == null)
+				result = caseC4Element(containerComponentization);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -290,6 +332,8 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTechnologicalElement(componentizationElement);
 			if (result == null)
+				result = caseC4Element(componentizationElement);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -303,6 +347,8 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTechnologicalElement(componentizationInteraction);
 			if (result == null)
+				result = caseC4Element(componentizationInteraction);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -310,12 +356,16 @@ public class C4Switch<T> extends Switch<T> {
 			ComponentizationInteractable componentizationInteractable = (ComponentizationInteractable) theEObject;
 			T result = caseComponentizationInteractable(componentizationInteractable);
 			if (result == null)
+				result = caseC4Element(componentizationInteractable);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case C4Package.COMPONENT_REFINEMENT: {
 			ComponentRefinement componentRefinement = (ComponentRefinement) theEObject;
 			T result = caseComponentRefinement(componentRefinement);
+			if (result == null)
+				result = caseC4Element(componentRefinement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -332,12 +382,29 @@ public class C4Switch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTechnologicalElement(componentClue);
 			if (result == null)
+				result = caseC4Element(componentClue);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		default:
 			return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseC4Element(C4Element object) {
+		return null;
 	}
 
 	/**

@@ -57,6 +57,34 @@ public interface C4Package extends EPackage {
 	C4Package eINSTANCE = fr.obeo.dsl.C4.model.impl.C4PackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.C4ElementImpl <em>Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.C4.model.impl.C4ElementImpl
+	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getC4Element()
+	 * @generated
+	 */
+	int C4_ELEMENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int C4_ELEMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int C4_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.NamedElementImpl <em>Named Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,7 +92,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 0;
+	int NAMED_ELEMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -73,7 +101,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_ELEMENT__NAME = 0;
+	int NAMED_ELEMENT__NAME = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Named Element</em>' class.
@@ -82,7 +110,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_ELEMENT_FEATURE_COUNT = 1;
+	int NAMED_ELEMENT_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Named Element</em>' class.
@@ -91,7 +119,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_ELEMENT_OPERATION_COUNT = 0;
+	int NAMED_ELEMENT_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.DescribedElementImpl <em>Described Element</em>}' class.
@@ -101,7 +129,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getDescribedElement()
 	 * @generated
 	 */
-	int DESCRIBED_ELEMENT = 1;
+	int DESCRIBED_ELEMENT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -110,7 +138,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESCRIBED_ELEMENT__DESCRIPTION = 0;
+	int DESCRIBED_ELEMENT__DESCRIPTION = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Described Element</em>' class.
@@ -119,7 +147,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESCRIBED_ELEMENT_FEATURE_COUNT = 1;
+	int DESCRIBED_ELEMENT_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Described Element</em>' class.
@@ -128,7 +156,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESCRIBED_ELEMENT_OPERATION_COUNT = 0;
+	int DESCRIBED_ELEMENT_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.TechnologicalElementImpl <em>Technological Element</em>}' class.
@@ -138,7 +166,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getTechnologicalElement()
 	 * @generated
 	 */
-	int TECHNOLOGICAL_ELEMENT = 2;
+	int TECHNOLOGICAL_ELEMENT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Technology</b></em>' attribute.
@@ -147,7 +175,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGICAL_ELEMENT__TECHNOLOGY = 0;
+	int TECHNOLOGICAL_ELEMENT__TECHNOLOGY = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Technological Element</em>' class.
@@ -156,7 +184,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGICAL_ELEMENT_FEATURE_COUNT = 1;
+	int TECHNOLOGICAL_ELEMENT_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Technological Element</em>' class.
@@ -165,7 +193,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGICAL_ELEMENT_OPERATION_COUNT = 0;
+	int TECHNOLOGICAL_ELEMENT_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.IconedElementImpl <em>Iconed Element</em>}' class.
@@ -175,7 +203,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getIconedElement()
 	 * @generated
 	 */
-	int ICONED_ELEMENT = 3;
+	int ICONED_ELEMENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Path To Icon</b></em>' attribute.
@@ -184,7 +212,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICONED_ELEMENT__PATH_TO_ICON = 0;
+	int ICONED_ELEMENT__PATH_TO_ICON = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Iconed Element</em>' class.
@@ -193,7 +221,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICONED_ELEMENT_FEATURE_COUNT = 1;
+	int ICONED_ELEMENT_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Iconed Element</em>' class.
@@ -202,7 +230,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICONED_ELEMENT_OPERATION_COUNT = 0;
+	int ICONED_ELEMENT_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.C4ModelImpl <em>Model</em>}' class.
@@ -212,7 +240,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getC4Model()
 	 * @generated
 	 */
-	int C4_MODEL = 4;
+	int C4_MODEL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -312,7 +340,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getSoftwareSystem()
 	 * @generated
 	 */
-	int SOFTWARE_SYSTEM = 5;
+	int SOFTWARE_SYSTEM = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -367,7 +395,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getContextInteractable()
 	 * @generated
 	 */
-	int CONTEXT_INTERACTABLE = 11;
+	int CONTEXT_INTERACTABLE = 12;
 
 	/**
 	 * The number of structural features of the '<em>Context Interactable</em>' class.
@@ -376,7 +404,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_INTERACTABLE_FEATURE_COUNT = 0;
+	int CONTEXT_INTERACTABLE_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Context Interactable</em>' class.
@@ -385,7 +413,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_INTERACTABLE_OPERATION_COUNT = 0;
+	int CONTEXT_INTERACTABLE_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.ExternalElementImpl <em>External Element</em>}' class.
@@ -395,7 +423,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getExternalElement()
 	 * @generated
 	 */
-	int EXTERNAL_ELEMENT = 6;
+	int EXTERNAL_ELEMENT = 7;
 
 	/**
 	 * The number of structural features of the '<em>External Element</em>' class.
@@ -423,7 +451,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getExternalPerson()
 	 * @generated
 	 */
-	int EXTERNAL_PERSON = 7;
+	int EXTERNAL_PERSON = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -469,7 +497,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getExternalSystem()
 	 * @generated
 	 */
-	int EXTERNAL_SYSTEM = 8;
+	int EXTERNAL_SYSTEM = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -524,7 +552,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getSystemContext()
 	 * @generated
 	 */
-	int SYSTEM_CONTEXT = 9;
+	int SYSTEM_CONTEXT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Context Interactions</b></em>' containment reference list.
@@ -533,7 +561,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTEXT__CONTEXT_INTERACTIONS = 0;
+	int SYSTEM_CONTEXT__CONTEXT_INTERACTIONS = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Context Interactables</b></em>' reference list.
@@ -542,7 +570,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTEXT__CONTEXT_INTERACTABLES = 1;
+	int SYSTEM_CONTEXT__CONTEXT_INTERACTABLES = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>System Context</em>' class.
@@ -551,7 +579,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTEXT_FEATURE_COUNT = 2;
+	int SYSTEM_CONTEXT_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>System Context</em>' class.
@@ -560,7 +588,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTEXT_OPERATION_COUNT = 0;
+	int SYSTEM_CONTEXT_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.ContextInteractionImpl <em>Context Interaction</em>}' class.
@@ -570,7 +598,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getContextInteraction()
 	 * @generated
 	 */
-	int CONTEXT_INTERACTION = 10;
+	int CONTEXT_INTERACTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -643,7 +671,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getSystemContainerization()
 	 * @generated
 	 */
-	int SYSTEM_CONTAINERIZATION = 12;
+	int SYSTEM_CONTAINERIZATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Containerization Elements</b></em>' containment reference list.
@@ -652,7 +680,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTAINERIZATION__CONTAINERIZATION_ELEMENTS = 0;
+	int SYSTEM_CONTAINERIZATION__CONTAINERIZATION_ELEMENTS = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Containerization Interactions</b></em>' containment reference list.
@@ -661,7 +689,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTAINERIZATION__CONTAINERIZATION_INTERACTIONS = 1;
+	int SYSTEM_CONTAINERIZATION__CONTAINERIZATION_INTERACTIONS = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>System Containerization</em>' class.
@@ -670,7 +698,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTAINERIZATION_FEATURE_COUNT = 2;
+	int SYSTEM_CONTAINERIZATION_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>System Containerization</em>' class.
@@ -679,7 +707,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTAINERIZATION_OPERATION_COUNT = 0;
+	int SYSTEM_CONTAINERIZATION_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.ComponentizationInteractableImpl <em>Componentization Interactable</em>}' class.
@@ -689,7 +717,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getComponentizationInteractable()
 	 * @generated
 	 */
-	int COMPONENTIZATION_INTERACTABLE = 19;
+	int COMPONENTIZATION_INTERACTABLE = 20;
 
 	/**
 	 * The number of structural features of the '<em>Componentization Interactable</em>' class.
@@ -698,7 +726,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTIZATION_INTERACTABLE_FEATURE_COUNT = 0;
+	int COMPONENTIZATION_INTERACTABLE_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Componentization Interactable</em>' class.
@@ -707,7 +735,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTIZATION_INTERACTABLE_OPERATION_COUNT = 0;
+	int COMPONENTIZATION_INTERACTABLE_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.ContainerizationInteractableImpl <em>Containerization Interactable</em>}' class.
@@ -717,7 +745,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getContainerizationInteractable()
 	 * @generated
 	 */
-	int CONTAINERIZATION_INTERACTABLE = 15;
+	int CONTAINERIZATION_INTERACTABLE = 16;
 
 	/**
 	 * The number of structural features of the '<em>Containerization Interactable</em>' class.
@@ -745,7 +773,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getContainerizationElement()
 	 * @generated
 	 */
-	int CONTAINERIZATION_ELEMENT = 13;
+	int CONTAINERIZATION_ELEMENT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Path To Icon</b></em>' attribute.
@@ -809,7 +837,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getContainerizationInteraction()
 	 * @generated
 	 */
-	int CONTAINERIZATION_INTERACTION = 14;
+	int CONTAINERIZATION_INTERACTION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -882,7 +910,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getContainerComponentization()
 	 * @generated
 	 */
-	int CONTAINER_COMPONENTIZATION = 16;
+	int CONTAINER_COMPONENTIZATION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Container</b></em>' reference.
@@ -891,7 +919,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_COMPONENTIZATION__CONTAINER = 0;
+	int CONTAINER_COMPONENTIZATION__CONTAINER = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Componentization Elements</b></em>' reference list.
@@ -900,7 +928,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_COMPONENTIZATION__COMPONENTIZATION_ELEMENTS = 1;
+	int CONTAINER_COMPONENTIZATION__COMPONENTIZATION_ELEMENTS = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Componentization Interactions</b></em>' reference list.
@@ -909,7 +937,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_COMPONENTIZATION__COMPONENTIZATION_INTERACTIONS = 2;
+	int CONTAINER_COMPONENTIZATION__COMPONENTIZATION_INTERACTIONS = C4_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Container Componentization</em>' class.
@@ -918,7 +946,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_COMPONENTIZATION_FEATURE_COUNT = 3;
+	int CONTAINER_COMPONENTIZATION_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Container Componentization</em>' class.
@@ -927,7 +955,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_COMPONENTIZATION_OPERATION_COUNT = 0;
+	int CONTAINER_COMPONENTIZATION_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.ComponentizationElementImpl <em>Componentization Element</em>}' class.
@@ -937,7 +965,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getComponentizationElement()
 	 * @generated
 	 */
-	int COMPONENTIZATION_ELEMENT = 17;
+	int COMPONENTIZATION_ELEMENT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Path To Icon</b></em>' attribute.
@@ -1001,7 +1029,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getComponentizationInteraction()
 	 * @generated
 	 */
-	int COMPONENTIZATION_INTERACTION = 18;
+	int COMPONENTIZATION_INTERACTION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1074,7 +1102,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getComponentRefinement()
 	 * @generated
 	 */
-	int COMPONENT_REFINEMENT = 20;
+	int COMPONENT_REFINEMENT = 21;
 
 	/**
 	 * The feature id for the '<em><b>Componentization Element</b></em>' reference.
@@ -1083,7 +1111,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_REFINEMENT__COMPONENTIZATION_ELEMENT = 0;
+	int COMPONENT_REFINEMENT__COMPONENTIZATION_ELEMENT = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Component Clues</b></em>' containment reference list.
@@ -1092,7 +1120,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_REFINEMENT__COMPONENT_CLUES = 1;
+	int COMPONENT_REFINEMENT__COMPONENT_CLUES = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Component Refinement</em>' class.
@@ -1101,7 +1129,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_REFINEMENT_FEATURE_COUNT = 2;
+	int COMPONENT_REFINEMENT_FEATURE_COUNT = C4_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Component Refinement</em>' class.
@@ -1110,7 +1138,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_REFINEMENT_OPERATION_COUNT = 0;
+	int COMPONENT_REFINEMENT_OPERATION_COUNT = C4_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.C4.model.impl.ComponentClueImpl <em>Component Clue</em>}' class.
@@ -1120,7 +1148,7 @@ public interface C4Package extends EPackage {
 	 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getComponentClue()
 	 * @generated
 	 */
-	int COMPONENT_CLUE = 21;
+	int COMPONENT_CLUE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Path To Icon</b></em>' attribute.
@@ -1184,6 +1212,16 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int COMPONENT_CLUE_OPERATION_COUNT = ICONED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * Returns the meta object for class '{@link fr.obeo.dsl.C4.model.api.C4Element <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element</em>'.
+	 * @see fr.obeo.dsl.C4.model.api.C4Element
+	 * @generated
+	 */
+	EClass getC4Element();
 
 	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.C4.model.api.NamedElement <em>Named Element</em>}'.
@@ -1714,6 +1752,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link fr.obeo.dsl.C4.model.impl.C4ElementImpl <em>Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.obeo.dsl.C4.model.impl.C4ElementImpl
+		 * @see fr.obeo.dsl.C4.model.impl.C4PackageImpl#getC4Element()
+		 * @generated
+		 */
+		EClass C4_ELEMENT = eINSTANCE.getC4Element();
+
 		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.C4.model.impl.NamedElementImpl <em>Named Element</em>}' class.
 		 * <!-- begin-user-doc -->

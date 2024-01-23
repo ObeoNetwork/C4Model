@@ -2,13 +2,10 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
-import fr.obeo.dsl.C4.model.api.ComponentizationInteractable;
-
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import fr.obeo.dsl.C4.model.api.ComponentizationInteractable;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,8 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class ComponentizationInteractableImpl extends MinimalEObjectImpl.Container
-		implements ComponentizationInteractable {
+public abstract class ComponentizationInteractableImpl extends C4ElementImpl implements ComponentizationInteractable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface C4Model extends NamedElement, DescribedElement {
+public interface C4Model extends NamedElement, DescribedElement, C4Element {
 	/**
 	 * Returns the value of the '<em><b>Software System</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

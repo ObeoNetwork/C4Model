@@ -4,8 +4,6 @@ package fr.obeo.dsl.C4.model.api;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Container Componentization</b></em>'.
@@ -24,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ContainerComponentization extends EObject {
+public interface ContainerComponentization extends C4Element {
 	/**
 	 * Returns the value of the '<em><b>Container</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -2,16 +2,12 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
-import fr.obeo.dsl.C4.model.api.TechnologicalElement;
-
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import fr.obeo.dsl.C4.model.api.TechnologicalElement;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class TechnologicalElementImpl extends MinimalEObjectImpl.Container implements TechnologicalElement {
+public abstract class TechnologicalElementImpl extends C4ElementImpl implements TechnologicalElement {
 	/**
 	 * The default value of the '{@link #getTechnology() <em>Technology</em>}' attribute.
 	 * <!-- begin-user-doc -->

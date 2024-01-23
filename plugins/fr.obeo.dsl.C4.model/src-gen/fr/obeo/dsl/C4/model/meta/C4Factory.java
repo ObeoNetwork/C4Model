@@ -2,6 +2,8 @@
  */
 package fr.obeo.dsl.C4.model.meta;
 
+import org.eclipse.emf.ecore.EFactory;
+
 import fr.obeo.dsl.C4.model.api.C4Model;
 import fr.obeo.dsl.C4.model.api.ComponentClue;
 import fr.obeo.dsl.C4.model.api.ComponentRefinement;
@@ -12,17 +14,11 @@ import fr.obeo.dsl.C4.model.api.ContainerizationElement;
 import fr.obeo.dsl.C4.model.api.ContainerizationInteractable;
 import fr.obeo.dsl.C4.model.api.ContainerizationInteraction;
 import fr.obeo.dsl.C4.model.api.ContextInteraction;
-import fr.obeo.dsl.C4.model.api.DescribedElement;
 import fr.obeo.dsl.C4.model.api.ExternalPerson;
 import fr.obeo.dsl.C4.model.api.ExternalSystem;
-import fr.obeo.dsl.C4.model.api.IconedElement;
-import fr.obeo.dsl.C4.model.api.NamedElement;
 import fr.obeo.dsl.C4.model.api.SoftwareSystem;
 import fr.obeo.dsl.C4.model.api.SystemContainerization;
 import fr.obeo.dsl.C4.model.api.SystemContext;
-import fr.obeo.dsl.C4.model.api.TechnologicalElement;
-
-import org.eclipse.emf.ecore.EFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,42 +36,6 @@ public interface C4Factory extends EFactory {
 	 * @generated
 	 */
 	C4Factory eINSTANCE = fr.obeo.dsl.C4.model.impl.C4FactoryImpl.init();
-
-	/**
-	 * Returns a new object of class '<em>Named Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Named Element</em>'.
-	 * @generated
-	 */
-	NamedElement createNamedElement();
-
-	/**
-	 * Returns a new object of class '<em>Described Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Described Element</em>'.
-	 * @generated
-	 */
-	DescribedElement createDescribedElement();
-
-	/**
-	 * Returns a new object of class '<em>Technological Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Technological Element</em>'.
-	 * @generated
-	 */
-	TechnologicalElement createTechnologicalElement();
-
-	/**
-	 * Returns a new object of class '<em>Iconed Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Iconed Element</em>'.
-	 * @generated
-	 */
-	IconedElement createIconedElement();
 
 	/**
 	 * Returns a new object of class '<em>Model</em>'.

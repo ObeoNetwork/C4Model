@@ -12,5 +12,5 @@ package fr.obeo.dsl.C4.model.api;
  * @model
  * @generated
  */
-public interface ExternalSystem extends ExternalElement, NamedElement, DescribedElement, IconedElement {
+public interface ExternalSystem extends ExternalElement, NamedElement, DescribedElement, IconedElement, C4Element {
 } // ExternalSystem

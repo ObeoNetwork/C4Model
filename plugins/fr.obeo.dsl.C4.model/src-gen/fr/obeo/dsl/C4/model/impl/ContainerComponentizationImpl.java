@@ -2,26 +2,20 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import fr.obeo.dsl.C4.model.api.ComponentizationElement;
 import fr.obeo.dsl.C4.model.api.ComponentizationInteraction;
 import fr.obeo.dsl.C4.model.api.ContainerComponentization;
 import fr.obeo.dsl.C4.model.api.ContainerizationElement;
-
 import fr.obeo.dsl.C4.model.meta.C4Package;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ContainerComponentizationImpl extends MinimalEObjectImpl.Container implements ContainerComponentization {
+public class ContainerComponentizationImpl extends C4ElementImpl implements ContainerComponentization {
 	/**
 	 * The cached value of the '{@link #getContainer() <em>Container</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -138,7 +132,7 @@ public class ContainerComponentizationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public EList<ComponentizationElement> getComponentizationElements() {
 		if (componentizationElements == null) {
-			componentizationElements = new EObjectResolvingEList<ComponentizationElement>(ComponentizationElement.class,
+			componentizationElements = new EObjectResolvingEList<>(ComponentizationElement.class,
 					this, C4Package.CONTAINER_COMPONENTIZATION__COMPONENTIZATION_ELEMENTS);
 		}
 		return componentizationElements;
@@ -152,7 +146,7 @@ public class ContainerComponentizationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public EList<ComponentizationInteraction> getComponentizationInteractions() {
 		if (componentizationInteractions == null) {
-			componentizationInteractions = new EObjectResolvingEList<ComponentizationInteraction>(
+			componentizationInteractions = new EObjectResolvingEList<>(
 					ComponentizationInteraction.class, this,
 					C4Package.CONTAINER_COMPONENTIZATION__COMPONENTIZATION_INTERACTIONS);
 		}

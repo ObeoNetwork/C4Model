@@ -2,18 +2,29 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
-import fr.obeo.dsl.C4.model.api.*;
-
-import fr.obeo.dsl.C4.model.meta.C4Factory;
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import fr.obeo.dsl.C4.model.api.C4Model;
+import fr.obeo.dsl.C4.model.api.ComponentClue;
+import fr.obeo.dsl.C4.model.api.ComponentRefinement;
+import fr.obeo.dsl.C4.model.api.ComponentizationElement;
+import fr.obeo.dsl.C4.model.api.ComponentizationInteraction;
+import fr.obeo.dsl.C4.model.api.ContainerComponentization;
+import fr.obeo.dsl.C4.model.api.ContainerizationElement;
+import fr.obeo.dsl.C4.model.api.ContainerizationInteractable;
+import fr.obeo.dsl.C4.model.api.ContainerizationInteraction;
+import fr.obeo.dsl.C4.model.api.ContextInteraction;
+import fr.obeo.dsl.C4.model.api.ExternalPerson;
+import fr.obeo.dsl.C4.model.api.ExternalSystem;
+import fr.obeo.dsl.C4.model.api.SoftwareSystem;
+import fr.obeo.dsl.C4.model.api.SystemContainerization;
+import fr.obeo.dsl.C4.model.api.SystemContext;
+import fr.obeo.dsl.C4.model.meta.C4Factory;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,14 +69,6 @@ public class C4FactoryImpl extends EFactoryImpl implements C4Factory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case C4Package.NAMED_ELEMENT:
-			return createNamedElement();
-		case C4Package.DESCRIBED_ELEMENT:
-			return createDescribedElement();
-		case C4Package.TECHNOLOGICAL_ELEMENT:
-			return createTechnologicalElement();
-		case C4Package.ICONED_ELEMENT:
-			return createIconedElement();
 		case C4Package.C4_MODEL:
 			return createC4Model();
 		case C4Package.SOFTWARE_SYSTEM:
@@ -99,50 +102,6 @@ public class C4FactoryImpl extends EFactoryImpl implements C4Factory {
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NamedElement createNamedElement() {
-		NamedElementImpl namedElement = new NamedElementImpl();
-		return namedElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public DescribedElement createDescribedElement() {
-		DescribedElementImpl describedElement = new DescribedElementImpl();
-		return describedElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TechnologicalElement createTechnologicalElement() {
-		TechnologicalElementImpl technologicalElement = new TechnologicalElementImpl();
-		return technologicalElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IconedElement createIconedElement() {
-		IconedElementImpl iconedElement = new IconedElementImpl();
-		return iconedElement;
 	}
 
 	/**
