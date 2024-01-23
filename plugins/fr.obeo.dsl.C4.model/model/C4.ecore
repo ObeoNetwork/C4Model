@@ -26,8 +26,8 @@
         eType="#//ExternalElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containerComponentizations"
         upperBound="-1" eType="#//ContainerComponentization" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="componentExternalResources"
-        upperBound="-1" eType="#//ComponentRefinement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentRefinements" upperBound="-1"
+        eType="#//ComponentRefinement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SoftwareSystem" eSuperTypes="#//NamedElement #//DescribedElement #//IconedElement #//ContextInteractable #//C4Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExternalElement" abstract="true" eSuperTypes="#//ContextInteractable #//ContainerizationInteractable #//C4Element"/>

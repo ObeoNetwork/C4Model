@@ -36,7 +36,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/systemContainerization"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/externalElements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/containerComponentizations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/componentExternalResources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference C4.ecore#//C4Model/componentRefinements"/>
     </genClasses>
     <genClasses ecoreClass="C4.ecore#//SoftwareSystem"/>
     <genClasses ecoreClass="C4.ecore#//ExternalElement"/>

@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link fr.obeo.dsl.C4.model.api.C4Model#getSystemContainerization <em>System Containerization</em>}</li>
  *   <li>{@link fr.obeo.dsl.C4.model.api.C4Model#getExternalElements <em>External Elements</em>}</li>
  *   <li>{@link fr.obeo.dsl.C4.model.api.C4Model#getContainerComponentizations <em>Container Componentizations</em>}</li>
- *   <li>{@link fr.obeo.dsl.C4.model.api.C4Model#getComponentExternalResources <em>Component External Resources</em>}</li>
+ *   <li>{@link fr.obeo.dsl.C4.model.api.C4Model#getComponentRefinements <em>Component Refinements</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.C4.model.meta.C4Package#getC4Model()
@@ -117,15 +117,15 @@ public interface C4Model extends NamedElement, DescribedElement, C4Element {
 	EList<ContainerComponentization> getContainerComponentizations();
 
 	/**
-	 * Returns the value of the '<em><b>Component External Resources</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Component Refinements</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.obeo.dsl.C4.model.api.ComponentRefinement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Component External Resources</em>' containment reference list.
-	 * @see fr.obeo.dsl.C4.model.meta.C4Package#getC4Model_ComponentExternalResources()
+	 * @return the value of the '<em>Component Refinements</em>' containment reference list.
+	 * @see fr.obeo.dsl.C4.model.meta.C4Package#getC4Model_ComponentRefinements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ComponentRefinement> getComponentExternalResources();
+	EList<ComponentRefinement> getComponentRefinements();
 
 } // C4Model

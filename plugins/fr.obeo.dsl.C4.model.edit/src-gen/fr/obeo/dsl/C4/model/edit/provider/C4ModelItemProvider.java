@@ -2,23 +2,20 @@
  */
 package fr.obeo.dsl.C4.model.edit.provider;
 
-import fr.obeo.dsl.C4.model.api.C4Model;
-
-import fr.obeo.dsl.C4.model.meta.C4Factory;
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import fr.obeo.dsl.C4.model.api.C4Model;
+import fr.obeo.dsl.C4.model.meta.C4Factory;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * This is the item provider adapter for a {@link fr.obeo.dsl.C4.model.api.C4Model} object.
@@ -86,7 +83,7 @@ public class C4ModelItemProvider extends NamedElementItemProvider {
 			childrenFeatures.add(C4Package.Literals.C4_MODEL__SYSTEM_CONTAINERIZATION);
 			childrenFeatures.add(C4Package.Literals.C4_MODEL__EXTERNAL_ELEMENTS);
 			childrenFeatures.add(C4Package.Literals.C4_MODEL__CONTAINER_COMPONENTIZATIONS);
-			childrenFeatures.add(C4Package.Literals.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES);
+			childrenFeatures.add(C4Package.Literals.C4_MODEL__COMPONENT_REFINEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -158,7 +155,7 @@ public class C4ModelItemProvider extends NamedElementItemProvider {
 		case C4Package.C4_MODEL__SYSTEM_CONTAINERIZATION:
 		case C4Package.C4_MODEL__EXTERNAL_ELEMENTS:
 		case C4Package.C4_MODEL__CONTAINER_COMPONENTIZATIONS:
-		case C4Package.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES:
+		case C4Package.C4_MODEL__COMPONENT_REFINEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -194,7 +191,7 @@ public class C4ModelItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add(createChildParameter(C4Package.Literals.C4_MODEL__CONTAINER_COMPONENTIZATIONS,
 				C4Factory.eINSTANCE.createContainerComponentization()));
 
-		newChildDescriptors.add(createChildParameter(C4Package.Literals.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES,
+		newChildDescriptors.add(createChildParameter(C4Package.Literals.C4_MODEL__COMPONENT_REFINEMENTS,
 				C4Factory.eINSTANCE.createComponentRefinement()));
 	}
 

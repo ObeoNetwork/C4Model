@@ -306,13 +306,13 @@ public interface C4Package extends EPackage {
 	int C4_MODEL__CONTAINER_COMPONENTIZATIONS = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Component External Resources</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Component Refinements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int C4_MODEL__COMPONENT_EXTERNAL_RESOURCES = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int C4_MODEL__COMPONENT_REFINEMENTS = NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -1373,15 +1373,15 @@ public interface C4Package extends EPackage {
 	EReference getC4Model_ContainerComponentizations();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.C4.model.api.C4Model#getComponentExternalResources <em>Component External Resources</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.C4.model.api.C4Model#getComponentRefinements <em>Component Refinements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Component External Resources</em>'.
-	 * @see fr.obeo.dsl.C4.model.api.C4Model#getComponentExternalResources()
+	 * @return the meta object for the containment reference list '<em>Component Refinements</em>'.
+	 * @see fr.obeo.dsl.C4.model.api.C4Model#getComponentRefinements()
 	 * @see #getC4Model()
 	 * @generated
 	 */
-	EReference getC4Model_ComponentExternalResources();
+	EReference getC4Model_ComponentRefinements();
 
 	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.C4.model.api.SoftwareSystem <em>Software System</em>}'.
@@ -1885,12 +1885,12 @@ public interface C4Package extends EPackage {
 		EReference C4_MODEL__CONTAINER_COMPONENTIZATIONS = eINSTANCE.getC4Model_ContainerComponentizations();
 
 		/**
-		 * The meta object literal for the '<em><b>Component External Resources</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Component Refinements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference C4_MODEL__COMPONENT_EXTERNAL_RESOURCES = eINSTANCE.getC4Model_ComponentExternalResources();
+		EReference C4_MODEL__COMPONENT_REFINEMENTS = eINSTANCE.getC4Model_ComponentRefinements();
 
 		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.C4.model.impl.SoftwareSystemImpl <em>Software System</em>}' class.

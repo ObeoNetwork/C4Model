@@ -2,6 +2,17 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import fr.obeo.dsl.C4.model.api.C4Model;
 import fr.obeo.dsl.C4.model.api.ComponentRefinement;
 import fr.obeo.dsl.C4.model.api.ContainerComponentization;
@@ -10,23 +21,7 @@ import fr.obeo.dsl.C4.model.api.ExternalElement;
 import fr.obeo.dsl.C4.model.api.SoftwareSystem;
 import fr.obeo.dsl.C4.model.api.SystemContainerization;
 import fr.obeo.dsl.C4.model.api.SystemContext;
-
 import fr.obeo.dsl.C4.model.meta.C4Package;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.obeo.dsl.C4.model.impl.C4ModelImpl#getSystemContainerization <em>System Containerization</em>}</li>
  *   <li>{@link fr.obeo.dsl.C4.model.impl.C4ModelImpl#getExternalElements <em>External Elements</em>}</li>
  *   <li>{@link fr.obeo.dsl.C4.model.impl.C4ModelImpl#getContainerComponentizations <em>Container Componentizations</em>}</li>
- *   <li>{@link fr.obeo.dsl.C4.model.impl.C4ModelImpl#getComponentExternalResources <em>Component External Resources</em>}</li>
+ *   <li>{@link fr.obeo.dsl.C4.model.impl.C4ModelImpl#getComponentRefinements <em>Component Refinements</em>}</li>
  * </ul>
  *
  * @generated
@@ -119,14 +114,14 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 	protected EList<ContainerComponentization> containerComponentizations;
 
 	/**
-	 * The cached value of the '{@link #getComponentExternalResources() <em>Component External Resources</em>}' containment reference list.
+	 * The cached value of the '{@link #getComponentRefinements() <em>Component Refinements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComponentExternalResources()
+	 * @see #getComponentRefinements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ComponentRefinement> componentExternalResources;
+	protected EList<ComponentRefinement> componentRefinements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -336,7 +331,7 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 	@Override
 	public EList<ExternalElement> getExternalElements() {
 		if (externalElements == null) {
-			externalElements = new EObjectContainmentEList<ExternalElement>(ExternalElement.class, this,
+			externalElements = new EObjectContainmentEList<>(ExternalElement.class, this,
 					C4Package.C4_MODEL__EXTERNAL_ELEMENTS);
 		}
 		return externalElements;
@@ -350,7 +345,7 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 	@Override
 	public EList<ContainerComponentization> getContainerComponentizations() {
 		if (containerComponentizations == null) {
-			containerComponentizations = new EObjectContainmentEList<ContainerComponentization>(
+			containerComponentizations = new EObjectContainmentEList<>(
 					ContainerComponentization.class, this, C4Package.C4_MODEL__CONTAINER_COMPONENTIZATIONS);
 		}
 		return containerComponentizations;
@@ -362,12 +357,12 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 	 * @generated
 	 */
 	@Override
-	public EList<ComponentRefinement> getComponentExternalResources() {
-		if (componentExternalResources == null) {
-			componentExternalResources = new EObjectContainmentEList<ComponentRefinement>(ComponentRefinement.class,
-					this, C4Package.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES);
+	public EList<ComponentRefinement> getComponentRefinements() {
+		if (componentRefinements == null) {
+			componentRefinements = new EObjectContainmentEList<>(ComponentRefinement.class, this,
+					C4Package.C4_MODEL__COMPONENT_REFINEMENTS);
 		}
-		return componentExternalResources;
+		return componentRefinements;
 	}
 
 	/**
@@ -388,8 +383,8 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 			return ((InternalEList<?>) getExternalElements()).basicRemove(otherEnd, msgs);
 		case C4Package.C4_MODEL__CONTAINER_COMPONENTIZATIONS:
 			return ((InternalEList<?>) getContainerComponentizations()).basicRemove(otherEnd, msgs);
-		case C4Package.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES:
-			return ((InternalEList<?>) getComponentExternalResources()).basicRemove(otherEnd, msgs);
+		case C4Package.C4_MODEL__COMPONENT_REFINEMENTS:
+			return ((InternalEList<?>) getComponentRefinements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -414,8 +409,8 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 			return getExternalElements();
 		case C4Package.C4_MODEL__CONTAINER_COMPONENTIZATIONS:
 			return getContainerComponentizations();
-		case C4Package.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES:
-			return getComponentExternalResources();
+		case C4Package.C4_MODEL__COMPONENT_REFINEMENTS:
+			return getComponentRefinements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -449,9 +444,9 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 			getContainerComponentizations().clear();
 			getContainerComponentizations().addAll((Collection<? extends ContainerComponentization>) newValue);
 			return;
-		case C4Package.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES:
-			getComponentExternalResources().clear();
-			getComponentExternalResources().addAll((Collection<? extends ComponentRefinement>) newValue);
+		case C4Package.C4_MODEL__COMPONENT_REFINEMENTS:
+			getComponentRefinements().clear();
+			getComponentRefinements().addAll((Collection<? extends ComponentRefinement>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -483,8 +478,8 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 		case C4Package.C4_MODEL__CONTAINER_COMPONENTIZATIONS:
 			getContainerComponentizations().clear();
 			return;
-		case C4Package.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES:
-			getComponentExternalResources().clear();
+		case C4Package.C4_MODEL__COMPONENT_REFINEMENTS:
+			getComponentRefinements().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -510,8 +505,8 @@ public class C4ModelImpl extends NamedElementImpl implements C4Model {
 			return externalElements != null && !externalElements.isEmpty();
 		case C4Package.C4_MODEL__CONTAINER_COMPONENTIZATIONS:
 			return containerComponentizations != null && !containerComponentizations.isEmpty();
-		case C4Package.C4_MODEL__COMPONENT_EXTERNAL_RESOURCES:
-			return componentExternalResources != null && !componentExternalResources.isEmpty();
+		case C4Package.C4_MODEL__COMPONENT_REFINEMENTS:
+			return componentRefinements != null && !componentRefinements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -421,7 +421,7 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 	 * @generated
 	 */
 	@Override
-	public EReference getC4Model_ComponentExternalResources() {
+	public EReference getC4Model_ComponentRefinements() {
 		return (EReference) c4ModelEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -805,7 +805,7 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		createEReference(c4ModelEClass, C4_MODEL__SYSTEM_CONTAINERIZATION);
 		createEReference(c4ModelEClass, C4_MODEL__EXTERNAL_ELEMENTS);
 		createEReference(c4ModelEClass, C4_MODEL__CONTAINER_COMPONENTIZATIONS);
-		createEReference(c4ModelEClass, C4_MODEL__COMPONENT_EXTERNAL_RESOURCES);
+		createEReference(c4ModelEClass, C4_MODEL__COMPONENT_REFINEMENTS);
 
 		softwareSystemEClass = createEClass(SOFTWARE_SYSTEM);
 
@@ -992,9 +992,9 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		initEReference(getC4Model_ContainerComponentizations(), this.getContainerComponentization(), null,
 				"containerComponentizations", null, 0, -1, C4Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getC4Model_ComponentExternalResources(), this.getComponentRefinement(), null,
-				"componentExternalResources", null, 0, -1, C4Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getC4Model_ComponentRefinements(), this.getComponentRefinement(), null, "componentRefinements",
+				null, 0, -1, C4Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(softwareSystemEClass, SoftwareSystem.class, "SoftwareSystem", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
