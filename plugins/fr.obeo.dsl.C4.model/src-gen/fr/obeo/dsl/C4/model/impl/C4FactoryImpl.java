@@ -25,6 +25,7 @@ import fr.obeo.dsl.C4.model.api.SystemContainerization;
 import fr.obeo.dsl.C4.model.api.SystemContext;
 import fr.obeo.dsl.C4.model.meta.C4Factory;
 import fr.obeo.dsl.C4.model.meta.C4Package;
+import fr.obeo.dsl.C4.model.meta.spec.C4FactoryImplSpec;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,7 +49,7 @@ public class C4FactoryImpl extends EFactoryImpl implements C4Factory {
 		} catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new C4FactoryImpl();
+		return new C4FactoryImplSpec();
 	}
 
 	/**
