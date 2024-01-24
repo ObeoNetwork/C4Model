@@ -13,5 +13,13 @@
             class="fr.obeo.dsl.C4.model.meta.C4Package"
             genModel="model/C4.genmodel"/>
    </extension>
+   <extension
+         point="org.eclipse.emf.ecore.factory_override">
+      <factory
+            class="fr.obeo.dsl.C4.model.meta.spec.C4FactoryImplSpec"
+            predecessor="fr.obeo.dsl.C4.model.impl.C4FactoryImpl"
+            uri="http://www.obeo.fr/dsl/C4/1.0.0">
+      </factory>
+   </extension>
 
 </plugin>
