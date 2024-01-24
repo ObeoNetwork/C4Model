@@ -46,25 +46,25 @@ public interface ContainerComponentization extends C4Element {
 	void setContainer(ContainerizationElement value);
 
 	/**
-	 * Returns the value of the '<em><b>Componentization Elements</b></em>' reference list.
+	 * Returns the value of the '<em><b>Componentization Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.obeo.dsl.C4.model.api.ComponentizationElement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Componentization Elements</em>' reference list.
+	 * @return the value of the '<em>Componentization Elements</em>' containment reference list.
 	 * @see fr.obeo.dsl.C4.model.meta.C4Package#getContainerComponentization_ComponentizationElements()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ComponentizationElement> getComponentizationElements();
 
 	/**
-	 * Returns the value of the '<em><b>Componentization Interactions</b></em>' reference list.
+	 * Returns the value of the '<em><b>Componentization Interactions</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.obeo.dsl.C4.model.api.ComponentizationInteraction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Componentization Interactions</em>' reference list.
+	 * @return the value of the '<em>Componentization Interactions</em>' containment reference list.
 	 * @see fr.obeo.dsl.C4.model.meta.C4Package#getContainerComponentization_ComponentizationInteractions()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ComponentizationInteraction> getComponentizationInteractions();

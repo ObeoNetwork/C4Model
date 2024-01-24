@@ -922,7 +922,7 @@ public interface C4Package extends EPackage {
 	int CONTAINER_COMPONENTIZATION__CONTAINER = C4_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Componentization Elements</b></em>' reference list.
+	 * The feature id for the '<em><b>Componentization Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -931,7 +931,7 @@ public interface C4Package extends EPackage {
 	int CONTAINER_COMPONENTIZATION__COMPONENTIZATION_ELEMENTS = C4_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Componentization Interactions</b></em>' reference list.
+	 * The feature id for the '<em><b>Componentization Interactions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1603,10 +1603,10 @@ public interface C4Package extends EPackage {
 	EReference getContainerComponentization_Container();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.obeo.dsl.C4.model.api.ContainerComponentization#getComponentizationElements <em>Componentization Elements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.C4.model.api.ContainerComponentization#getComponentizationElements <em>Componentization Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Componentization Elements</em>'.
+	 * @return the meta object for the containment reference list '<em>Componentization Elements</em>'.
 	 * @see fr.obeo.dsl.C4.model.api.ContainerComponentization#getComponentizationElements()
 	 * @see #getContainerComponentization()
 	 * @generated
@@ -1614,10 +1614,10 @@ public interface C4Package extends EPackage {
 	EReference getContainerComponentization_ComponentizationElements();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.obeo.dsl.C4.model.api.ContainerComponentization#getComponentizationInteractions <em>Componentization Interactions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.C4.model.api.ContainerComponentization#getComponentizationInteractions <em>Componentization Interactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Componentization Interactions</em>'.
+	 * @return the meta object for the containment reference list '<em>Componentization Interactions</em>'.
 	 * @see fr.obeo.dsl.C4.model.api.ContainerComponentization#getComponentizationInteractions()
 	 * @see #getContainerComponentization()
 	 * @generated
@@ -2087,7 +2087,7 @@ public interface C4Package extends EPackage {
 		EReference CONTAINER_COMPONENTIZATION__CONTAINER = eINSTANCE.getContainerComponentization_Container();
 
 		/**
-		 * The meta object literal for the '<em><b>Componentization Elements</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Componentization Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2096,7 +2096,7 @@ public interface C4Package extends EPackage {
 				.getContainerComponentization_ComponentizationElements();
 
 		/**
-		 * The meta object literal for the '<em><b>Componentization Interactions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Componentization Interactions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -5,11 +5,13 @@ package fr.obeo.dsl.C4.model.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import fr.obeo.dsl.C4.model.api.ComponentizationElement;
 import fr.obeo.dsl.C4.model.api.ComponentizationInteraction;
@@ -44,7 +46,7 @@ public class ContainerComponentizationImpl extends C4ElementImpl implements Cont
 	protected ContainerizationElement container;
 
 	/**
-	 * The cached value of the '{@link #getComponentizationElements() <em>Componentization Elements</em>}' reference list.
+	 * The cached value of the '{@link #getComponentizationElements() <em>Componentization Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getComponentizationElements()
@@ -54,7 +56,7 @@ public class ContainerComponentizationImpl extends C4ElementImpl implements Cont
 	protected EList<ComponentizationElement> componentizationElements;
 
 	/**
-	 * The cached value of the '{@link #getComponentizationInteractions() <em>Componentization Interactions</em>}' reference list.
+	 * The cached value of the '{@link #getComponentizationInteractions() <em>Componentization Interactions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getComponentizationInteractions()
@@ -132,8 +134,9 @@ public class ContainerComponentizationImpl extends C4ElementImpl implements Cont
 	@Override
 	public EList<ComponentizationElement> getComponentizationElements() {
 		if (componentizationElements == null) {
-			componentizationElements = new EObjectResolvingEList<>(ComponentizationElement.class,
-					this, C4Package.CONTAINER_COMPONENTIZATION__COMPONENTIZATION_ELEMENTS);
+			componentizationElements = new EObjectContainmentEList<>(
+					ComponentizationElement.class, this,
+					C4Package.CONTAINER_COMPONENTIZATION__COMPONENTIZATION_ELEMENTS);
 		}
 		return componentizationElements;
 	}
@@ -146,11 +149,27 @@ public class ContainerComponentizationImpl extends C4ElementImpl implements Cont
 	@Override
 	public EList<ComponentizationInteraction> getComponentizationInteractions() {
 		if (componentizationInteractions == null) {
-			componentizationInteractions = new EObjectResolvingEList<>(
+			componentizationInteractions = new EObjectContainmentEList<>(
 					ComponentizationInteraction.class, this,
 					C4Package.CONTAINER_COMPONENTIZATION__COMPONENTIZATION_INTERACTIONS);
 		}
 		return componentizationInteractions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case C4Package.CONTAINER_COMPONENTIZATION__COMPONENTIZATION_ELEMENTS:
+			return ((InternalEList<?>) getComponentizationElements()).basicRemove(otherEnd, msgs);
+		case C4Package.CONTAINER_COMPONENTIZATION__COMPONENTIZATION_INTERACTIONS:
+			return ((InternalEList<?>) getComponentizationInteractions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
