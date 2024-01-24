@@ -38,7 +38,7 @@ public class C4FactoryImpl extends EFactoryImpl implements C4Factory {
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static C4Factory init() {
 		try {
