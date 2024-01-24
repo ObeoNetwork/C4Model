@@ -2,19 +2,16 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import fr.obeo.dsl.C4.model.api.ContextInteractable;
 import fr.obeo.dsl.C4.model.api.ContextInteraction;
 import fr.obeo.dsl.C4.model.api.DescribedElement;
 import fr.obeo.dsl.C4.model.api.TechnologicalElement;
-
 import fr.obeo.dsl.C4.model.meta.C4Package;
-
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->

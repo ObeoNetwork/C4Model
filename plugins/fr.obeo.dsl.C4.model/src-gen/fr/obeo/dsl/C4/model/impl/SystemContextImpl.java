@@ -5,7 +5,6 @@ package fr.obeo.dsl.C4.model.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -16,7 +15,6 @@ import fr.obeo.dsl.C4.model.api.ContextInteractable;
 import fr.obeo.dsl.C4.model.api.ContextInteraction;
 import fr.obeo.dsl.C4.model.api.SystemContext;
 import fr.obeo.dsl.C4.model.meta.C4Package;
-import fr.obeo.dsl.C4.model.utils.C4ModelUtils;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,7 +77,7 @@ public class SystemContextImpl extends C4ElementImpl implements SystemContext {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public EList<ContextInteractable> getContextInteractables() {
@@ -87,7 +85,7 @@ public class SystemContextImpl extends C4ElementImpl implements SystemContext {
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
 		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		return new BasicEList<>(C4ModelUtils.DerivedFeatures.getContextInteractables(this));
+		throw new UnsupportedOperationException();
 	}
 
 	/**

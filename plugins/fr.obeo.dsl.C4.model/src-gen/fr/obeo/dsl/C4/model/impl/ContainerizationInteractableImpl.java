@@ -2,11 +2,10 @@
  */
 package fr.obeo.dsl.C4.model.impl;
 
-import fr.obeo.dsl.C4.model.api.ContainerizationInteractable;
-
-import fr.obeo.dsl.C4.model.meta.C4Package;
-
 import org.eclipse.emf.ecore.EClass;
+
+import fr.obeo.dsl.C4.model.api.ContainerizationInteractable;
+import fr.obeo.dsl.C4.model.meta.C4Package;
 
 /**
  * <!-- begin-user-doc -->

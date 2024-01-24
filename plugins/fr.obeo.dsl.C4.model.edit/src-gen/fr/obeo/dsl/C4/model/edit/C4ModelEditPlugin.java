@@ -3,7 +3,6 @@
 package fr.obeo.dsl.C4.model.edit;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
