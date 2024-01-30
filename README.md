@@ -1,21 +1,18 @@
-# C4 Model
+# Prototype Sample modeler for the C4 model using Sirius Web
 
-This is the Ecore metamodel for the [C4 Model](https://c4model.com/).
+This is a prototype of a modeler for the [C4 Model](https://c4model.com) using [Eclipse Sirius Web](https://github.com/eclipse-sirius/sirius-web)
 
-## Building
+## Building & Running
 
-`mvn clean verify`
+First follow the [Sirius Web setup instructions](https://github.com/eclipse-sirius/sirius-web/) related to the Docker/PostgreSQL and Frontend concerns.
+
+For the backend, from an IDE or the command-line, install the following two dependencies locally:
+* `mvn install` on `C4Model.c4-metamodel/pom.xml`
+* `mvn install` on `sirius-components-c4-starter/pom.xml`
+
+Then follow the Sirius Web instructions related to the backend for running the sample application as a Spring Boot App.
 
 ## Editing
 
-* IDE: Download Eclipse Modeling 2023-12 from https://www.eclipse.org/downloads/packages/release/2023-12/r
-
-Additional plug-ins:
-
-* Help > Install New Software... and add https://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/ so your IDE can resolve Xtext dependencies.
-* From the same menu, install the sole feature from https://download.eclipse.org/cbi/updates/tpd/nightly/latest
-* From https://download.eclipse.org/eclipse/updates/4.23/ install the following: "Eclipse XML Editors and Tools", "M2E - Maven Integration for Eclipse"
-
-After restarting the IDE:
-
-* Right click on '/fr.obeo.dsl.C4.releng.target/C4Model.tpd' and select 'Set as Target Platform'
+* For the C4 metamodel, see instructions in `c4-metamodel/README.md`
+* For the C4 Sirius Web starter and the Sirius Web sample application, refer to the [Sirius Web instructions](https://github.com/eclipse-sirius/sirius-web/)
