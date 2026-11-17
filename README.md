@@ -16,3 +16,9 @@ Then follow the Sirius Web instructions related to the backend for running the s
 
 * For the C4 metamodel, see instructions in `c4-metamodel/README.md`
 * For the C4 Sirius Web starter and the Sirius Web sample application, refer to the [Sirius Web instructions](https://github.com/eclipse-sirius/sirius-web/)
+
+## License
+
+This project is licensed under the [Eclipse Public License 2.0](LICENSE) (`SPDX-License-Identifier: EPL-2.0`).
+
+The reference diagrams in `sirius-web-with-c4-starter/sirius-components-c4-starter/diagrams-spec/` come from the [C4 model](https://c4model.com/) website and are licensed under CC BY 4.0; see the README in that folder.
