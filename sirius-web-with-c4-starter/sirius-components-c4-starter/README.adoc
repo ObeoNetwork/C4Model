@@ -8,7 +8,7 @@ This module provides a prototype sample Sirius Web modeler for the [C4 model](ht
 
 === C4 Model
 
-* Dependency to the C4 metamodel is hard-coded for now (see jars in 'dependencies/'). Probably we need to set up the [metamodel repository](https://github.com/ObeoNetwork/C4Model) to publish its resulting artefacts somewhere we can add as dependency.
+* The C4 metamodel (`c4-metamodel/` in this repository) must be installed in the local Maven repository (`mvn install`) before building this module; its artifacts are not yet published to a public Maven repository.
 * We should set up custom icons for C4 elements
 
 === Representations
